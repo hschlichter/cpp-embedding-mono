@@ -30,3 +30,5 @@
 
 # Directories
 out/
+
+*.swp
