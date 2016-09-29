@@ -12,12 +12,11 @@ CS_SRC = interop.cs\
 
 # Main build rules.
 .PHONY: all
-all: $(CPP_SRC)
+all: $(OUTFOLDER)/hello.dll $(CPP_SRC)
 	$(CC) $(CPP_SRC) -o $(OUTFOLDER)/main $(CFLAGS) $(INCLUDE) $(LDINCLUDE) $(LDFLAGS)
 
 # Build C# dll.
-.PHONY: cs
-cs: $(CS_SRC)
+$(OUTFOLDER)/hello.dll: $(CS_SRC)
 	mcs -t:library -out:$(OUTFOLDER)/hello.dll $(CS_SRC)
 
 # Source folders to compile
