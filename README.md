@@ -2,11 +2,8 @@
 Small sample on how to embed the mono runtime into a C++ program.
 
 ```sh
-# To build cpp program.
+# To build both cpp and cs, just do
 $ make
-
-# To build cs assembly.
-$ make cs
 
 # Run.
 $ cd out/
